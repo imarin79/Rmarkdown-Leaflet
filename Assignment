@@ -1,0 +1,25 @@
+---
+title: "Rmarkdown-leaflet Assignment"
+author: "Isaac M-V"
+date: "7/2/2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# **The Mount Sinai Hospital**
+```{r, eval=TRUE, echo=FALSE, message= FALSE}
+
+library(tidyverse)
+library(leaflet)
+
+m <- leaflet() %>%
+     addTiles() %>%
+     addMarkers(lat = 40.7897, lng = -73.9534, 
+             popup="The Mount Sinai Hospital") %>%
+    addRectangles(lat1 =  40.7890, lng1 = -73.9528, lat2 = 40.79, lng2 = -73.954)
+
+m
+
+```
+
